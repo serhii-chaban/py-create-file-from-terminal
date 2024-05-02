@@ -28,10 +28,11 @@ def write_file() -> None:
         file.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
         count = 1
         while True:
-            line = input("Enter content line:")
+            line = input("Enter content line: ")
             if line.lower() == "stop":
+                file.write("\n")
                 break
-            file.write(f"{count} {line}" + "\n")
+            file.write(f"{count} {line}\n")
             count += 1
 
 
